@@ -113,6 +113,7 @@
 		<cs:public name="build">
 			<cs:attribute name="package.emf-xcore-Update" />
 			<cs:attribute name="copy.repository" />
+			<cs:attribute name="copy.zips" />
 		</cs:public>
 	</cs:groups>
 </cs:cspecExtension>
