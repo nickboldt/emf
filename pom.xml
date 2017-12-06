@@ -57,6 +57,7 @@
     <module>doc/org.eclipse.emf.doc</module>
     <module>doc/org.eclipse.emf.examples.jet.article2</module>
     <module>doc/org.eclipse.emf.doc-feature</module>
+    
     <module>examples/org.eclipse.emf.activities</module>
     <module>examples/org.eclipse.emf.examples</module>
     <module>examples/org.eclipse.emf.examples-feature</module>
@@ -71,6 +72,7 @@
     <module>examples/org.eclipse.emf.java</module>
     <module>examples/org.eclipse.emf.java.edit</module>
     <module>examples/org.eclipse.emf.java.editor</module>
+
     <module>features/org.eclipse.emf-feature</module>
     <module>features/org.eclipse.emf.base-feature</module>
     <module>features/org.eclipse.emf.codegen-feature</module>
@@ -93,6 +95,7 @@
     <module>features/org.eclipse.emf.mapping.ecore.editor-feature</module>
     <module>features/org.eclipse.emf.mapping.ui-feature</module>
     <module>features/org.eclipse.emf.sdk-feature</module>
+
     <module>plugins/org.eclipse.emf</module>
     <module>plugins/org.eclipse.emf.ant</module>
     <module>plugins/org.eclipse.emf.codegen</module>
@@ -126,6 +129,7 @@
     <module>plugins/org.eclipse.emf.mapping.ecore2xml</module>
     <module>plugins/org.eclipse.emf.mapping.ecore2xml.ui</module>
     <module>plugins/org.eclipse.emf.mapping.ui</module>
+
     <module>tests/org.eclipse.emf.test.common</module>
     <module>tests/org.eclipse.emf.test.core</module>
     <module>tests/org.eclipse.emf.test.databinding</module>
@@ -136,6 +140,8 @@
     <module>tests/org.eclipse.emf.test.xml</module>
     <module>tests/org.eclipse.emf.tests</module>
     <module>tests/org.eclipse.emf.tests-feature</module>
+
+    <module>site</module>
   </modules>
 
   <build>

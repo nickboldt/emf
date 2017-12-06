@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+    <feature id="org.eclipse.emf.base"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.codegen"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.codegen.ecore"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.codegen.ecore.ui"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.codegen.ui"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.common"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.common.ui"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.converter"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.databinding"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.databinding.edit"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.ecore"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.ecore.edit"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.ecore.editor"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.edit"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.edit.ui"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.license"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.mapping"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.mapping.ecore"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.mapping.ecore.editor"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.mapping.ui"><category name="emf"/></feature>
+
+    <feature id="org.eclipse.emf.sdk"><category name="emf-sdk"/></feature>
+    <feature id="org.eclipse.emf.doc"><category name="emf-sdk"/></feature>
+    <feature id="org.eclipse.emf.examples"><category name="emf-sdk"/></feature>
+
+    <feature id="org.eclipse.emf.tests"><category name="emf-tests"/></feature>
+
+    <category-def name="emf" label="Eclipse Modeling Framework">
+      <description>
+         Eclipse Modeling Framework runtime
+      </description>
+    </category-def>
+    <category-def name="emf-sdk" label="Eclipse Modeling Framework SDK">
+      <description>
+         Eclipse Modeling Framework runtime, developer resources and examples
+      </description>
+    </category-def>
+    <category-def name="emf-tests" label="Eclipse Modeling Framework tests">
+      <description>
+         Eclipse Modeling Framework tests
+      </description>
+    </category-def>
+</site>
