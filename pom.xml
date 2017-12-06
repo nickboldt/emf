@@ -1,17 +1,56 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2017, Red Hat, Inc.
+   All rights reserved. This program and the accompanying materialsare made available under the terms of 
+   the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html -->
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+
+  <prerequisites>
+    <maven>3.3.9</maven>
+  </prerequisites>
+
   <groupId>org.eclipse.emf</groupId>
   <artifactId>org.eclipse.emf-parent</artifactId>
   <version>2.14.0-SNAPSHOT</version>
   <packaging>pom</packaging>
+
+  <name>EMF Parent</name>
+
+  <licenses>
+    <license>
+      <name>Eclipse Public License v1.0</name>
+      <comments>
+       All rights reserved.
+
+       This program and the accompanying materials are made
+       available under the terms of the Eclipse Public License v1.0
+       which accompanies this distribution, and is available at
+       http://www.eclipse.org/legal/epl-v10.htm
+      </comments>
+    </license>
+  </licenses>
 
   <properties>
     <tycho-version>1.0.0</tycho-version>
     <tycho-extras-version>${tycho-version}</tycho-extras-version>
     <eclipse-platform-name>photon</eclipse-platform-name>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <cbi-plugins.version>1.1.4</cbi-plugins.version>
+    <cbi-repo.url>https://repo.eclipse.org/content/repositories/cbi/</cbi-repo.url>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>eclipse-platform</id>
+      <url>http://download.eclipse.org/releases/${eclipse-platform-name}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>license-feature</id>
+      <url>http://download.eclipse.org/cbi/updates/license/</url>
+      <layout>p2</layout>
+    </repository>
+  </repositories>
 
   <modules>
     <module>doc/org.eclipse.emf.cheatsheets</module>
@@ -98,21 +137,34 @@
     <module>tests/org.eclipse.emf.tests</module>
     <module>tests/org.eclipse.emf.tests-feature</module>
   </modules>
+
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-source-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <executions>
+          <execution>
+            <id>plugin-source</id>
+            <goals>
+              <goal>plugin-source</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.eclipse.tycho.extras</groupId>
         <artifactId>tycho-source-feature-plugin</artifactId>
         <version>${tycho-extras-version}</version>
-        <executions>
-          <execution>
-            <id>source-feature</id>
-            <goals>
-              <goal>source-feature</goal>
-            </goals>
-          </execution>
-        </executions>
         <configuration>
+          <includeBinaryFeature>false</includeBinaryFeature>
           <excludes>
             <plugin id="org.eclipse.emf"/>
             <plugin id="org.eclipse.emf.activities"/>
@@ -144,25 +196,44 @@
             <feature id="org.eclipse.emf.mapping.ecore.editor"/>
           </excludes>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-source-plugin</artifactId>
-        <version>${tycho-version}</version>
         <executions>
           <execution>
-            <id>plugin-source</id>
+            <id>source-feature</id>
             <goals>
-              <goal>plugin-source</goal>
+              <goal>source-feature</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho.extras</groupId>
+        <artifactId>tycho-pack200b-plugin</artifactId>
+        <version>${tycho-extras-version}</version>
+        <executions>
+          <execution>
+            <id>pack200-pack</id>
+            <goals>
+              <goal>pack</goal>
             </goals>
           </execution>
         </executions>
       </plugin>
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-maven-plugin</artifactId>
+        <artifactId>tycho-p2-plugin</artifactId>
         <version>${tycho-version}</version>
-        <extensions>true</extensions>
+        <configuration>
+          <defaultP2Metadata>false</defaultP2Metadata>
+        </configuration>
+        <executions>
+          <execution>
+            <id>attach-p2-metadata</id>
+            <phase>package</phase>
+            <goals>
+              <goal>p2-metadata</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
@@ -192,17 +263,140 @@
     </plugins>
   </build>
 
-  <repositories>
-    <repository>
-      <id>eclipse-platform</id>
-      <url>http://download.eclipse.org/releases/${eclipse-platform-name}</url>
-      <layout>p2</layout>
-    </repository>
-    <repository>
-      <id>license-feature</id>
-      <url>http://download.eclipse.org/cbi/updates/license/</url>
-      <layout>p2</layout>
-    </repository>
-  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>tycho</id>
+      <url>${tycho-repo.url}</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>cbi-repo</id>
+      <url>${cbi-repo.url}</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>tycho-snapshot</id>
+      <url>${tycho-snapshot-repo.url}</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+    <!-- switch to use  ${cbi-repo.url}
+    <pluginRepository>
+      <id>cbi-snapshot-repo</id>
+      <url>${cbi-snapshot-repo.url}</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+    -->
+    <pluginRepository>
+      <id>sonatype-public-grid</id>
+      <url>https://repository.sonatype.org/content/groups/sonatype-public-grid</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>sonatype-public-repository</id>
+      <url>https://oss.sonatype.org/content/groups/public</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <profiles>
+    <profile>
+      <id>eclipse-sign</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>target-platform-configuration</artifactId>
+            <version>${tycho-version}</version>
+            <configuration>
+              <includePackedArtifacts>true</includePackedArtifacts>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.eclipse.tycho.extras</groupId>
+            <artifactId>tycho-pack200a-plugin</artifactId>
+            <version>${tycho-extras-version}</version>
+            <configuration>
+              <fork>true</fork>
+            </configuration>
+            <executions>
+              <execution>
+                <id>pack200-normalize</id>
+                <goals>
+                  <goal>normalize</goal>
+                </goals>
+                <phase>verify</phase>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.eclipse.cbi.maven.plugins</groupId>
+            <artifactId>eclipse-jarsigner-plugin</artifactId>
+            <version>${cbi-plugins.version}</version>
+            <executions>
+              <execution>
+                <id>sign</id>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+                <phase>verify</phase>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.eclipse.tycho.extras</groupId>
+            <artifactId>tycho-pack200b-plugin</artifactId>
+            <version>${tycho-extras-version}</version>
+            <configuration>
+              <fork>true</fork>
+            </configuration>
+            <executions>
+              <execution>
+                <id>pack200-pack</id>
+                <goals>
+                  <goal>pack</goal>
+                </goals>
+                <phase>verify</phase>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.eclipse.tycho</groupId>
+            <artifactId>tycho-p2-plugin</artifactId>
+            <version>${tycho-version}</version>
+            <executions>
+              <execution>
+                <id>p2-metadata</id>
+                <goals>
+                  <goal>p2-metadata</goal>
+                </goals>
+                <phase>verify</phase>
+              </execution>
+            </executions>
+            <configuration>
+              <defaultP2Metadata>false</defaultP2Metadata>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
 </project>
