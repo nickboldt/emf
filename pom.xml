@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.eclipse.emf</groupId>
+  <artifactId>org.eclipse.emf-39e89bbc44bb3c2535b713848961e07e0087d754</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <tycho-version>1.0.0</tycho-version>
+    <tycho-extras-version>${tycho-version}</tycho-extras-version>
+    <eclipse-platform-name>photon</eclipse-platform-name>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <modules>
+    <module>doc/org.eclipse.emf.cheatsheets</module>
+    <module>doc/org.eclipse.emf.doc</module>
+    <module>doc/org.eclipse.emf.examples.jet.article2</module>
+    <module>doc/org.eclipse.emf.doc-feature</module>
+    <module>examples/org.eclipse.emf.activities</module>
+    <module>examples/org.eclipse.emf.examples</module>
+    <module>examples/org.eclipse.emf.examples-feature</module>
+    <module>examples/org.eclipse.emf.examples.databinding.project.core</module>
+    <module>examples/org.eclipse.emf.examples.databinding.project.core.model</module>
+    <module>examples/org.eclipse.emf.examples.databinding.project.ui.rcp</module>
+    <module>examples/org.eclipse.emf.examples.generator.validator</module>
+    <module>examples/org.eclipse.emf.examples.library</module>
+    <module>examples/org.eclipse.emf.examples.library.edit</module>
+    <module>examples/org.eclipse.emf.examples.library.editor</module>
+    <module>examples/org.eclipse.emf.exporter.html</module>
+    <module>examples/org.eclipse.emf.java</module>
+    <module>examples/org.eclipse.emf.java.edit</module>
+    <module>examples/org.eclipse.emf.java.editor</module>
+    <module>features/org.eclipse.emf-feature</module>
+    <module>features/org.eclipse.emf.base-feature</module>
+    <module>features/org.eclipse.emf.codegen-feature</module>
+    <module>features/org.eclipse.emf.codegen.ecore-feature</module>
+    <module>features/org.eclipse.emf.codegen.ecore.ui-feature</module>
+    <module>features/org.eclipse.emf.codegen.ui-feature</module>
+    <module>features/org.eclipse.emf.common-feature</module>
+    <module>features/org.eclipse.emf.common.ui-feature</module>
+    <module>features/org.eclipse.emf.converter-feature</module>
+    <module>features/org.eclipse.emf.databinding-feature</module>
+    <module>features/org.eclipse.emf.databinding.edit-feature</module>
+    <module>features/org.eclipse.emf.ecore-feature</module>
+    <module>features/org.eclipse.emf.ecore.edit-feature</module>
+    <module>features/org.eclipse.emf.ecore.editor-feature</module>
+    <module>features/org.eclipse.emf.edit-feature</module>
+    <module>features/org.eclipse.emf.edit.ui-feature</module>
+    <module>features/org.eclipse.emf.license-feature</module>
+    <module>features/org.eclipse.emf.mapping-feature</module>
+    <module>features/org.eclipse.emf.mapping.ecore-feature</module>
+    <module>features/org.eclipse.emf.mapping.ecore.editor-feature</module>
+    <module>features/org.eclipse.emf.mapping.ui-feature</module>
+    <module>features/org.eclipse.emf.sdk-feature</module>
+    <module>plugins/org.eclipse.emf</module>
+    <module>plugins/org.eclipse.emf.ant</module>
+    <module>plugins/org.eclipse.emf.codegen</module>
+    <module>plugins/org.eclipse.emf.codegen.ecore</module>
+    <module>plugins/org.eclipse.emf.codegen.ecore.ui</module>
+    <module>plugins/org.eclipse.emf.codegen.ui</module>
+    <module>plugins/org.eclipse.emf.common</module>
+    <module>plugins/org.eclipse.emf.common.ui</module>
+    <module>plugins/org.eclipse.emf.converter</module>
+    <module>plugins/org.eclipse.emf.databinding</module>
+    <module>plugins/org.eclipse.emf.databinding.edit</module>
+    <module>plugins/org.eclipse.emf.ecore</module>
+    <module>plugins/org.eclipse.emf.ecore.change</module>
+    <module>plugins/org.eclipse.emf.ecore.change.edit</module>
+    <module>plugins/org.eclipse.emf.ecore.edit</module>
+    <module>plugins/org.eclipse.emf.ecore.editor</module>
+    <module>plugins/org.eclipse.emf.ecore.xmi</module>
+    <module>plugins/org.eclipse.emf.edit</module>
+    <module>plugins/org.eclipse.emf.edit.ui</module>
+    <module>plugins/org.eclipse.emf.example.installer</module>
+    <module>plugins/org.eclipse.emf.exporter</module>
+    <module>plugins/org.eclipse.emf.importer</module>
+    <module>plugins/org.eclipse.emf.importer.ecore</module>
+    <module>plugins/org.eclipse.emf.importer.java</module>
+    <module>plugins/org.eclipse.emf.importer.rose</module>
+    <module>plugins/org.eclipse.emf.mapping</module>
+    <module>plugins/org.eclipse.emf.mapping.ecore</module>
+    <module>plugins/org.eclipse.emf.mapping.ecore.editor</module>
+    <module>plugins/org.eclipse.emf.mapping.ecore2ecore</module>
+    <module>plugins/org.eclipse.emf.mapping.ecore2ecore.editor</module>
+    <module>plugins/org.eclipse.emf.mapping.ecore2xml</module>
+    <module>plugins/org.eclipse.emf.mapping.ecore2xml.ui</module>
+    <module>plugins/org.eclipse.emf.mapping.ui</module>
+    <module>tests/org.eclipse.emf.test.common</module>
+    <module>tests/org.eclipse.emf.test.core</module>
+    <module>tests/org.eclipse.emf.test.databinding</module>
+    <module>tests/org.eclipse.emf.test.databinding.edit</module>
+    <module>tests/org.eclipse.emf.test.edit</module>
+    <module>tests/org.eclipse.emf.test.examples</module>
+    <module>tests/org.eclipse.emf.test.tools</module>
+    <module>tests/org.eclipse.emf.test.xml</module>
+    <module>tests/org.eclipse.emf.tests</module>
+    <module>tests/org.eclipse.emf.tests-feature</module>
+  </modules>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho.extras</groupId>
+        <artifactId>tycho-source-feature-plugin</artifactId>
+        <version>${tycho-extras-version}</version>
+        <executions>
+          <execution>
+            <id>source-feature</id>
+            <goals>
+              <goal>source-feature</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <excludes>
+            <plugin id="org.eclipse.emf"/>
+            <plugin id="org.eclipse.emf.activities"/>
+            <plugin id="org.eclipse.emf.doc"/>
+            <plugin id="org.eclipse.emf.example.installer"/>
+            <plugin id="org.eclipse.emf.examples"/>
+            <plugin id="org.eclipse.emf.mapping.ecore"/>
+            <plugin id="org.eclipse.emf.mapping.ecore.editor"/>
+            <plugin id="org.eclipse.emf.tests"/>
+            <feature id="org.eclipse.emf"/>
+            <feature id="org.eclipse.emf.common"/>
+            <feature id="org.eclipse.emf.common.ui"/>
+            <feature id="org.eclipse.emf.doc"/>
+            <feature id="org.eclipse.emf.ecore"/>
+            <feature id="org.eclipse.emf.edit"/>
+            <feature id="org.eclipse.emf.edit.ui"/>
+            <feature id="org.eclipse.emf.ecore.edit"/>
+            <feature id="org.eclipse.emf.ecore.editor"/>
+            <feature id="org.eclipse.emf.codegen"/>
+            <feature id="org.eclipse.emf.codegen.ui"/>
+            <feature id="org.eclipse.emf.codegen.ecore"/>
+            <feature id="org.eclipse.emf.codegen.ecore.ui"/>
+            <feature id="org.eclipse.emf.converter"/>
+            <feature id="org.eclipse.emf.databinding"/>
+            <feature id="org.eclipse.emf.databinding.edit"/>
+            <feature id="org.eclipse.emf.mapping"/>
+            <feature id="org.eclipse.emf.mapping.ecore"/>
+            <feature id="org.eclipse.emf.mapping.ui"/>
+            <feature id="org.eclipse.emf.mapping.ecore.editor"/>
+          </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-source-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <executions>
+          <execution>
+            <id>plugin-source</id>
+            <goals>
+              <goal>plugin-source</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>${tycho-version}</version>
+        <configuration>
+          <includePackedArtifacts>true</includePackedArtifacts>
+          <environments>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86</arch>
+            </environment>
+            <environment>
+              <os>linux</os>
+              <ws>gtk</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86</arch>
+            </environment>
+            <environment>
+              <os>win32</os>
+              <ws>win32</ws>
+              <arch>x86_64</arch>
+            </environment>
+            <environment>
+              <os>macosx</os>
+              <ws>cocoa</ws>
+              <arch>x86_64</arch>
+            </environment>
+          </environments>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>eclipse-platform</id>
+      <url>http://download.eclipse.org/releases/${eclipse-platform-name}</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>license-feature</id>
+      <url>http://download.eclipse.org/cbi/updates/license/</url>
+      <layout>p2</layout>
+    </repository>
+  </repositories>
+
+</project>
