@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.eclipse.emf</groupId>
+    <artifactId>org.eclipse.emf-parent</artifactId>
+    <version>2.14.0-SNAPSHOT</version>
+  </parent>
+  <groupId>org.eclipse.emf.features</groupId>
+  <artifactId>features</artifactId>
+  <version>2.14.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>org.eclipse.emf-feature</module>
+    <module>org.eclipse.emf.base-feature</module>
+    <module>org.eclipse.emf.codegen-feature</module>
+    <module>org.eclipse.emf.codegen.ecore-feature</module>
+    <module>org.eclipse.emf.codegen.ecore.ui-feature</module>
+    <module>org.eclipse.emf.codegen.ui-feature</module>
+    <module>org.eclipse.emf.common-feature</module>
+    <module>org.eclipse.emf.common.ui-feature</module>
+    <module>org.eclipse.emf.converter-feature</module>
+    <module>org.eclipse.emf.databinding-feature</module>
+    <module>org.eclipse.emf.databinding.edit-feature</module>
+    <module>org.eclipse.emf.ecore-feature</module>
+    <module>org.eclipse.emf.ecore.edit-feature</module>
+    <module>org.eclipse.emf.ecore.editor-feature</module>
+    <module>org.eclipse.emf.ecore.xcore-feature</module>
+    <module>org.eclipse.emf.ecore.xcore.lib-feature</module>
+    <module>org.eclipse.emf.ecore.xcore.ui-feature</module>
+    <module>org.eclipse.emf.ecore.xcore.sdk-feature</module>
+    <module>org.eclipse.emf.edit-feature</module>
+    <module>org.eclipse.emf.edit.ui-feature</module>
+    <module>org.eclipse.emf.license-feature</module>
+    <module>org.eclipse.emf.mapping-feature</module>
+    <module>org.eclipse.emf.mapping.ecore-feature</module>
+    <module>org.eclipse.emf.mapping.ecore.editor-feature</module>
+    <module>org.eclipse.emf.mapping.ui-feature</module>
+    <module>org.eclipse.emf.oda-feature</module>
+    <module>org.eclipse.emf.oda.ecore-feature</module>
+    <module>org.eclipse.emf.oda.ecore.ui-feature</module>
+    <module>org.eclipse.emf.oda.sdk-feature</module>
+    <!-- <module>org.eclipse.emf.rap-feature</module> -->
+    <!-- <module>org.eclipse.emf.rap.common.ui-feature</module> -->
+    <!-- <module>org.eclipse.emf.rap.edit.ui-feature</module> -->
+    <!-- <module>org.eclipse.emf.rap.sdk-feature</module> -->
+    <module>org.eclipse.emf.sdk-feature</module>
+    <module>org.eclipse.emf.all-feature</module>
+  </modules>
+
+  <profiles>
+    <profile>
+        <id>gwt</id>
+        <modules>
+            <module>org.eclipse.emf.gwt-feature</module>
+            <module>org.eclipse.emf.gwt.common-feature</module>
+            <module>org.eclipse.emf.gwt.ecore-feature</module>
+            <module>org.eclipse.emf.gwt.ecore.edit-feature</module>
+            <module>org.eclipse.emf.gwt.edit-feature</module>
+            <module>org.eclipse.emf.gwt.edit.ui-feature</module>
+            <module>org.eclipse.emf.gwt.sdk-feature</module>
+        </modules>
+    </profile>
+  </profiles>
+
+</project>

@@ -42,7 +42,7 @@
   <repositories>
     <repository>
       <id>eclipse-platform</id>
-      <url>http://download.eclipse.org/releases/${eclipse-platform-name}</url>
+      <url>http://download.eclipse.org/releases/${eclipse-platform-name}/</url>
       <layout>p2</layout>
     </repository>
     <repository>
@@ -50,97 +50,51 @@
       <url>http://download.eclipse.org/cbi/updates/license/</url>
       <layout>p2</layout>
     </repository>
+    <repository>
+      <id>orbit</id>
+      <url>http://download.eclipse.org/tools/orbit/downloads/drops/S20171130170529/repository/</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>gwt-4.6</id>
+      <url>https://dl.google.com/eclipse/plugin/4.6/</url>
+      <layout>p2</layout>
+    </repository>
+    <!-- to resolve XSD features, reference the Tycho-built XSD latest CI build site -->
+    <repository>
+      <id>xsd-milestones</id>
+      <url>https://hudson.eclipse.org/xtext/view/EMF/job/xsd-tycho/lastSuccessfulBuild/artifact/site/target/repository/</url>
+      <layout>p2</layout>
+    </repository>
+
+    <!-- TODO: is this old repo needed? <repository>
+      <id>gwt-4.3</id>
+      <url>http://archive.eclipse.org/modeling/emf/emf/gwt/4.3/</url>
+      <layout>p2</layout>
+    </repository> -->
+    <!-- TODO: are either of these xtext URLs needed? <repository>
+      <id>xtext-releases</id>
+      <url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
+      <layout>p2</layout>
+    </repository>
+    <repository>
+      <id>xtext-nightly</id>
+      <url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/nightly/</url>
+      <layout>p2</layout>
+    </repository> -->
+    <!-- TODO: are any of these needed?
+      http://download.itemis.com/updates/releases/2.1.0
+      http://download.eclipse.org/rt/rap/nightly/runtime
+      http://download.eclipse.org/modeling/emf/emf/updates/2.14milestones/
+    --> 
   </repositories>
 
   <modules>
-    <module>doc/org.eclipse.emf.cheatsheets</module>
-    <module>doc/org.eclipse.emf.doc</module>
-    <module>doc/org.eclipse.emf.examples.jet.article2</module>
-    <module>doc/org.eclipse.emf.doc-feature</module>
-    
-    <module>examples/org.eclipse.emf.activities</module>
-    <module>examples/org.eclipse.emf.examples</module>
-    <module>examples/org.eclipse.emf.examples-feature</module>
-    <module>examples/org.eclipse.emf.examples.databinding.project.core</module>
-    <module>examples/org.eclipse.emf.examples.databinding.project.core.model</module>
-    <module>examples/org.eclipse.emf.examples.databinding.project.ui.rcp</module>
-    <module>examples/org.eclipse.emf.examples.generator.validator</module>
-    <module>examples/org.eclipse.emf.examples.library</module>
-    <module>examples/org.eclipse.emf.examples.library.edit</module>
-    <module>examples/org.eclipse.emf.examples.library.editor</module>
-    <module>examples/org.eclipse.emf.exporter.html</module>
-    <module>examples/org.eclipse.emf.java</module>
-    <module>examples/org.eclipse.emf.java.edit</module>
-    <module>examples/org.eclipse.emf.java.editor</module>
-
-    <module>features/org.eclipse.emf-feature</module>
-    <module>features/org.eclipse.emf.base-feature</module>
-    <module>features/org.eclipse.emf.codegen-feature</module>
-    <module>features/org.eclipse.emf.codegen.ecore-feature</module>
-    <module>features/org.eclipse.emf.codegen.ecore.ui-feature</module>
-    <module>features/org.eclipse.emf.codegen.ui-feature</module>
-    <module>features/org.eclipse.emf.common-feature</module>
-    <module>features/org.eclipse.emf.common.ui-feature</module>
-    <module>features/org.eclipse.emf.converter-feature</module>
-    <module>features/org.eclipse.emf.databinding-feature</module>
-    <module>features/org.eclipse.emf.databinding.edit-feature</module>
-    <module>features/org.eclipse.emf.ecore-feature</module>
-    <module>features/org.eclipse.emf.ecore.edit-feature</module>
-    <module>features/org.eclipse.emf.ecore.editor-feature</module>
-    <module>features/org.eclipse.emf.edit-feature</module>
-    <module>features/org.eclipse.emf.edit.ui-feature</module>
-    <module>features/org.eclipse.emf.license-feature</module>
-    <module>features/org.eclipse.emf.mapping-feature</module>
-    <module>features/org.eclipse.emf.mapping.ecore-feature</module>
-    <module>features/org.eclipse.emf.mapping.ecore.editor-feature</module>
-    <module>features/org.eclipse.emf.mapping.ui-feature</module>
-    <module>features/org.eclipse.emf.sdk-feature</module>
-
-    <module>plugins/org.eclipse.emf</module>
-    <module>plugins/org.eclipse.emf.ant</module>
-    <module>plugins/org.eclipse.emf.codegen</module>
-    <module>plugins/org.eclipse.emf.codegen.ecore</module>
-    <module>plugins/org.eclipse.emf.codegen.ecore.ui</module>
-    <module>plugins/org.eclipse.emf.codegen.ui</module>
-    <module>plugins/org.eclipse.emf.common</module>
-    <module>plugins/org.eclipse.emf.common.ui</module>
-    <module>plugins/org.eclipse.emf.converter</module>
-    <module>plugins/org.eclipse.emf.databinding</module>
-    <module>plugins/org.eclipse.emf.databinding.edit</module>
-    <module>plugins/org.eclipse.emf.ecore</module>
-    <module>plugins/org.eclipse.emf.ecore.change</module>
-    <module>plugins/org.eclipse.emf.ecore.change.edit</module>
-    <module>plugins/org.eclipse.emf.ecore.edit</module>
-    <module>plugins/org.eclipse.emf.ecore.editor</module>
-    <module>plugins/org.eclipse.emf.ecore.xmi</module>
-    <module>plugins/org.eclipse.emf.edit</module>
-    <module>plugins/org.eclipse.emf.edit.ui</module>
-    <module>plugins/org.eclipse.emf.example.installer</module>
-    <module>plugins/org.eclipse.emf.exporter</module>
-    <module>plugins/org.eclipse.emf.importer</module>
-    <module>plugins/org.eclipse.emf.importer.ecore</module>
-    <module>plugins/org.eclipse.emf.importer.java</module>
-    <module>plugins/org.eclipse.emf.importer.rose</module>
-    <module>plugins/org.eclipse.emf.mapping</module>
-    <module>plugins/org.eclipse.emf.mapping.ecore</module>
-    <module>plugins/org.eclipse.emf.mapping.ecore.editor</module>
-    <module>plugins/org.eclipse.emf.mapping.ecore2ecore</module>
-    <module>plugins/org.eclipse.emf.mapping.ecore2ecore.editor</module>
-    <module>plugins/org.eclipse.emf.mapping.ecore2xml</module>
-    <module>plugins/org.eclipse.emf.mapping.ecore2xml.ui</module>
-    <module>plugins/org.eclipse.emf.mapping.ui</module>
-
-    <module>tests/org.eclipse.emf.test.common</module>
-    <module>tests/org.eclipse.emf.test.core</module>
-    <module>tests/org.eclipse.emf.test.databinding</module>
-    <module>tests/org.eclipse.emf.test.databinding.edit</module>
-    <module>tests/org.eclipse.emf.test.edit</module>
-    <module>tests/org.eclipse.emf.test.examples</module>
-    <module>tests/org.eclipse.emf.test.tools</module>
-    <module>tests/org.eclipse.emf.test.xml</module>
-    <module>tests/org.eclipse.emf.tests</module>
-    <module>tests/org.eclipse.emf.tests-feature</module>
-
+    <module>plugins</module>
+    <module>tests</module>
+    <module>examples</module>
+    <module>doc</module>
+    <module>features</module>
     <module>site</module>
   </modules>
 
