@@ -24,9 +24,9 @@ http://www.eclipse.org/legal/epl-v10.html
    </license>
 
    <requires>
-      <includes id="org.eclipse.emf.all" version="0.0.0"/>
-      <includes id="org.eclipse.emf.rap.sdk" version="0.0.0"/>
-      <includes id="org.eclipse.emf.gwt.sdk" version="0.0.0"/>
-   </requires>
+      <import feature="org.eclipse.emf.all"/>
+      <import feature="org.eclipse.emf.rap.sdk"/>
+      <import feature="org.eclipse.emf.gwt.sdk"/>
+  </requires>
 
 </feature>
