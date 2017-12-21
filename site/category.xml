@@ -30,6 +30,11 @@
     <feature id="org.eclipse.emf.oda.ecore"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.oda.ecore.ui"><category name="emf"/></feature>
 
+    <feature id="org.eclipse.emf.rap"><category name="emf-rap"/></feature>
+    <feature id="org.eclipse.emf.rap.common.ui"><category name="emf-rap"/></feature>
+    <feature id="org.eclipse.emf.rap.edit.ui"><category name="emf-rap"/></feature>
+    <feature id="org.eclipse.emf.rap.sdk"><category name="emf-rap"/></feature>
+
     <feature id="org.eclipse.emf.all"><category name="emf-sdk"/></feature>
     <feature id="org.eclipse.emf.ecore.xcore.sdk"><category name="emf-sdk"/></feature>
     <feature id="org.eclipse.emf.oda.sdk"><category name="emf-sdk"/></feature>
@@ -70,6 +75,11 @@
     <feature id="org.eclipse.emf.oda.ecore.source"><category name="emf-sources"/></feature>
     <feature id="org.eclipse.emf.oda.ecore.ui.source"><category name="emf-sources"/></feature>
 
+    <feature id="org.eclipse.emf.rap.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.rap.common.ui.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.rap.edit.ui.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.rap.sdk.source"><category name="emf-sources"/></feature>
+
     <feature id="org.eclipse.emf.all"><category name="emf-sources"/></feature>
     <feature id="org.eclipse.emf.ecore.xcore.sdk"><category name="emf-sources"/></feature>
     <feature id="org.eclipse.emf.oda.sdk"><category name="emf-sources"/></feature>
@@ -83,6 +93,11 @@
     <category-def name="emf" label="Eclipse Modeling Framework">
       <description>
          Eclipse Modeling Framework runtime
+      </description>
+    </category-def>
+    <category-def name="emf-rap" label="Eclipse Modeling Framework - Rich Ajax Platform">
+      <description>
+         Eclipse Modeling Framework for Rich Ajax Platform
       </description>
     </category-def>
     <category-def name="emf-sdk" label="Eclipse Modeling Framework SDK">
