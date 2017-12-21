@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+
+    <feature id="org.eclipse.emf"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.base"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.codegen"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.codegen.ecore"><category name="emf"/></feature>
@@ -13,6 +15,10 @@
     <feature id="org.eclipse.emf.ecore"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.ecore.edit"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.ecore.editor"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.ecore.xcore"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.ecore.xcore.lib"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.ecore.xcore.ui"><category name="emf"/></feature>
+
     <feature id="org.eclipse.emf.edit"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.edit.ui"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.license"><category name="emf"/></feature>
@@ -20,12 +26,59 @@
     <feature id="org.eclipse.emf.mapping.ecore"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.mapping.ecore.editor"><category name="emf"/></feature>
     <feature id="org.eclipse.emf.mapping.ui"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.oda"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.oda.ecore"><category name="emf"/></feature>
+    <feature id="org.eclipse.emf.oda.ecore.ui"><category name="emf"/></feature>
 
+    <feature id="org.eclipse.emf.all"><category name="emf-sdk"/></feature>
+    <feature id="org.eclipse.emf.ecore.xcore.sdk"><category name="emf-sdk"/></feature>
+    <feature id="org.eclipse.emf.oda.sdk"><category name="emf-sdk"/></feature>
     <feature id="org.eclipse.emf.sdk"><category name="emf-sdk"/></feature>
     <feature id="org.eclipse.emf.doc"><category name="emf-sdk"/></feature>
     <feature id="org.eclipse.emf.examples"><category name="emf-sdk"/></feature>
 
     <feature id="org.eclipse.emf.tests"><category name="emf-tests"/></feature>
+    <feature id="org.eclipse.emf.test.ecore.xcore"><category name="emf-tests"/></feature>
+
+    <!-- sources -->
+    <feature id="org.eclipse.emf.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.base.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.codegen.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.codegen.ecore.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.codegen.ecore.ui.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.codegen.ui.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.common.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.common.ui.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.converter.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.databinding.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.databinding.edit.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.ecore.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.ecore.edit.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.ecore.editor.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.ecore.xcore.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.ecore.xcore.lib.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.ecore.xcore.ui.source"><category name="emf-sources"/></feature>
+
+    <feature id="org.eclipse.emf.edit.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.edit.ui.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.license.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.mapping.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.mapping.ecore.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.mapping.ecore.editor.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.mapping.ui.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.oda.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.oda.ecore.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.oda.ecore.ui.source"><category name="emf-sources"/></feature>
+
+    <feature id="org.eclipse.emf.all"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.ecore.xcore.sdk"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.oda.sdk"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.sdk.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.doc.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.examples.source"><category name="emf-sources"/></feature>
+
+    <feature id="org.eclipse.emf.tests.source"><category name="emf-sources"/></feature>
+    <feature id="org.eclipse.emf.test.ecore.xcore.source"><category name="emf-sources"/></feature>
 
     <category-def name="emf" label="Eclipse Modeling Framework">
       <description>
@@ -40,6 +93,11 @@
     <category-def name="emf-tests" label="Eclipse Modeling Framework tests">
       <description>
          Eclipse Modeling Framework tests
+      </description>
+    </category-def>
+    <category-def name="emf-sources" label="Eclipse Modeling Framework sources">
+      <description>
+         Eclipse Modeling Framework sources
       </description>
     </category-def>
 </site>
