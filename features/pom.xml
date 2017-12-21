@@ -41,10 +41,10 @@
     <module>org.eclipse.emf.oda.ecore-feature</module>
     <module>org.eclipse.emf.oda.ecore.ui-feature</module>
     <module>org.eclipse.emf.oda.sdk-feature</module>
-    <!-- <module>org.eclipse.emf.rap-feature</module> -->
-    <!-- <module>org.eclipse.emf.rap.common.ui-feature</module> -->
-    <!-- <module>org.eclipse.emf.rap.edit.ui-feature</module> -->
-    <!-- <module>org.eclipse.emf.rap.sdk-feature</module> -->
+    <module>org.eclipse.emf.rap-feature</module>
+    <module>org.eclipse.emf.rap.common.ui-feature</module>
+    <module>org.eclipse.emf.rap.edit.ui-feature</module>
+    <module>org.eclipse.emf.rap.sdk-feature</module>
     <module>org.eclipse.emf.sdk-feature</module>
     <module>org.eclipse.emf.all-feature</module>
   </modules>
