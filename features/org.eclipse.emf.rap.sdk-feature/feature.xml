@@ -28,12 +28,9 @@ http://www.eclipse.org/legal/epl-v10.html
       <discovery label="%ModelingUpdateSiteName" url="http://www.eclipse.org/modeling/updates/"/>
    </url>
 
-   <includes
-         id="org.eclipse.emf.rap"
-         version="0.0.0"/>
-
-   <includes
-         id="org.eclipse.emf.rap.source"
-         version="0.0.0"/>
+   <requires>
+      <import feature="org.eclipse.emf.rap"/>
+      <!-- <import feature="org.eclipse.emf.rap.source"/> -->
+   </requires>
 
 </feature>
