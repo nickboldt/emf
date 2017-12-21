@@ -28,12 +28,11 @@ http://www.eclipse.org/legal/epl-v10.html
       <discovery label="%ModelingUpdateSiteName" url="http://www.eclipse.org/modeling/updates/"/>
    </url>
 
-   <includes id="org.eclipse.emf.source" version="0.0.0"/>
-   <includes id="org.eclipse.emf.doc.source" version="0.0.0"/>
-
    <requires>
       <import feature="org.eclipse.emf"/>
+      <import feature="org.eclipse.emf.source"/>
       <import feature="org.eclipse.emf.doc"/>
+      <import feature="org.eclipse.emf.doc.source"/>
    </requires>
 
    <plugin
